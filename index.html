@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO Meta Tags -->
+        <title>OMNYGEN | Desenvolvimento de Sites e Aplicativos</title>
+        <meta name="description" content="OMNYGEN: Especialistas em desenvolvimento de sites de alta performance e aplicativos mobile inovadores.">
+        <meta name="keywords" content="desenvolvimento web, aplicativos, apps, sites, UI/UX, OMNYGEN, tecnologia, landing page, SEO, mobile">
+        <meta name="author" content="OMNYGEN">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Tailwind CSS (CDN) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <!-- Google Fonts: Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+        
+        <!-- Tailwind Configuration -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            omny: {
+                                dark: '#0B1120',
+                                darker: '#050810',
+                                blue: '#0052FF',
+                                green: '#00E676'
+                            }
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
+        
+        <!-- Custom CSS for Tubular Gradients and Effects -->
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #0B1120;
+                color: #ffffff;
+                scroll-behavior: smooth;
+            }
+            
+            /* Text Gradient */
+            .text-gradient {
+                background: linear-gradient(135deg, #0052FF 0%, #00E676 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+            
+            /* Tubular Gradient - Button / Background Effect */
+            .tubular-bg {
+                background: linear-gradient(135deg, #0052FF 0%, #00E676 100%);
+                box-shadow: 
+                    inset 0px 4px 6px rgba(255, 255, 255, 0.4),
+                    inset 0px -4px 6px rgba(0, 0, 0, 0.5),
+                    0px 10px 25px rgba(0, 230, 118, 0.4);
+                transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            }
+            
+            .tubular-bg:hover {
+                transform: translateY(-3px) scale(1.02);
+                box-shadow: 
+                    inset 0px 6px 8px rgba(255, 255, 255, 0.5),
+                    inset 0px -6px 8px rgba(0, 0, 0, 0.6),
+                    0px 15px 30px rgba(0, 230, 118, 0.6);
+                filter: brightness(1.1);
+            }
+            
+            /* Tubular Gradient - Border for Cards */
+            .tubular-card-wrapper {
+                position: relative;
+                border-radius: 1.5rem;
+                padding: 4px;
+                background: linear-gradient(135deg, #0052FF 0%, #00E676 100%);
+                box-shadow: 
+                    inset 0px 2px 4px rgba(255, 255, 255, 0.3),
+                    inset 0px -2px 4px rgba(0, 0, 0, 0.4),
+                    0px 10px 20px rgba(0, 82, 255, 0.15);
+                transition: transform 0.3s ease;
+            }
+            
+            .tubular-card-wrapper:hover {
+                transform: translateY(-5px);
+                box-shadow: 
+                    inset 0px 2px 4px rgba(255, 255, 255, 0.4),
+                    inset 0px -2px 4px rgba(0, 0, 0, 0.5),
+                    0px 15px 30px rgba(0, 230, 118, 0.3);
+            }
+            
+            .tubular-card-inner {
+                background-color: #0B1120;
+                border-radius: calc(1.5rem - 4px);
+                height: 100%;
+                box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.8);
+            }
+
+            /* Floating Animation for the WhatsApp Button */
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-15px); }
+                100% { transform: translateY(0px); }
+            }
+            
+            .floating {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            /* Background Ambient Glow */
+            .ambient-glow {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(120px);
+                opacity: 0.15;
+                z-index: -1;
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body class="antialiased overflow-x-hidden relative">
+        
+        <!-- Ambient Background Lights -->
+        <div class="ambient-glow bg-omny-blue w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+        <div class="ambient-glow bg-omny-green w-[600px] h-[600px] bottom-[20%] right-[-200px]"></div>
+        
+        <!-- Header / Navigation -->
+        <header class="fixed w-full top-0 z-50 bg-omny-dark/90 backdrop-blur-lg border-b border-white/5 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                
+                <!-- Logo Original -->
+                <a href="#" class="flex items-center gap-4 group">
+                    <img src="logo.jpg" alt="OMNYGEN Logo" class="h-16 w-auto rounded-full">
+                    <span class="text-2xl font-black tracking-tight text-white hidden sm:block">OMNY<span class="text-gradient">GEN</span></span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#hero" class="text-gray-300 font-semibold hover:text-white transition">Início</a>
+                    <a href="#services" class="text-gray-300 font-semibold hover:text-white transition">Expertise</a>
+                </nav>
+                
+                <!-- Botão Contato Header -->
+                <a href="https://wa.me/5511976468487?text=Olá!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20com%20a%20OMNYGEN." target="_blank" class="hidden md:inline-flex tubular-bg text-white font-bold py-3 px-8 rounded-full text-sm">
+                    Fale Conosco
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            
+            <!-- Hero Section -->
+            <section id="hero" class="pt-40 pb-24 md:pt-56 md:pb-32 relative flex items-center justify-center min-h-[90vh]">
+                <div class="container mx-auto px-6 text-center z-10 relative flex flex-col items-center">
+                    
+                    <div class="inline-block mb-6 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                        <span class="text-sm font-bold tracking-widest text-gradient uppercase">Inovação Absoluta em Código</span>
+                    </div>
+                    
+                    <!-- Título Corrigido e Centralizado -->
+                    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-8 text-center w-full max-w-5xl">
+                        Desenvolvimento de <br class="hidden md:block">
+                        <span class="text-gradient">Sites e Aplicativos</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center">
+                        A OMNYGEN une engenharia de software premium, design de alta conversão e performance inigualável para transformar sua visão em tecnologia de impacto real.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-6 w-full">
+                        <a href="https://wa.me/5511976468487?text=Olá!%20Quero%20iniciar%20um%20projeto%20com%20a%20OMNYGEN." target="_blank" class="tubular-bg text-white font-bold text-lg py-4 px-10 rounded-full flex items-center justify-center gap-3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                            </svg>
+                            Iniciar Meu Projeto
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Services Section -->
+            <section id="services" class="py-24 bg-omny-darker relative">
+                <!-- Background grid texture -->
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02MCAwaS02MHY2MGg2MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=')] opacity-30 z-0"></div>
+                
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-black mb-4">Nossa <span class="text-gradient">Expertise</span></h2>
+                        <p class="text-xl text-gray-400">Soluções modulares, escaláveis e sob medida para o seu negócio.</p>
+                    </div>
+                    
+                    <!-- Foco Exclusivo em Sites, Apps e UI/UX -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- Web Development Card -->
+                        <div class="tubular-card-wrapper h-full">
+                            <div class="tubular-card-inner p-10 flex flex-col items-start">
+                                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-omny-blue">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">Desenvolvimento de Sites</h3>
+                                <p class="text-gray-400 mb-6 flex-grow">
+                                    Criamos Landing Pages focadas em conversão, e-commerces ultra rápidos e sistemas web complexos. Estrutura otimizada com SEO rigoroso.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- App Development Card -->
+                        <div class="tubular-card-wrapper h-full">
+                            <div class="tubular-card-inner p-10 flex flex-col items-start">
+                                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-omny-green">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">Aplicativos Mobile</h3>
+                                <p class="text-gray-400 mb-6 flex-grow">
+                                    Desenvolvimento de Apps iOS e Android com performance nativa e arquitetura robusta. Cuidamos desde o código até a publicação nas lojas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- UX/UI Design Card -->
+                        <div class="tubular-card-wrapper h-full">
+                            <div class="tubular-card-inner p-10 flex flex-col items-start">
+                                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-white">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">UX / UI Design</h3>
+                                <p class="text-gray-400 mb-6 flex-grow">
+                                    Interfaces modernas e intuitivas. Desenhamos a experiência do usuário para garantir que seu site ou aplicativo seja visualmente impactante e fácil de usar.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="py-24 bg-omny-dark relative overflow-hidden">
+                <div class="container mx-auto px-6 relative z-10 text-center">
+                    <h2 class="text-4xl md:text-5xl font-black mb-6">Pronto para elevar seu negócio?</h2>
+                    <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                        Entre em contato direto pelo WhatsApp. Estamos prontos para desenhar a arquitetura perfeita para o seu site ou aplicativo.
+                    </p>
+                    <a href="https://wa.me/5511976468487?text=Olá!%20Vim%20pelo%20site%20da%20OMNYGEN%20e%20quero%20falar%20sobre%20meu%20projeto." target="_blank" class="inline-flex tubular-bg text-white font-bold text-xl py-5 px-12 rounded-full shadow-2xl">
+                        Falar com Especialista
+                    </a>
+                </div>
+            </section>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-omny-darker border-t border-white/5 py-12">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                <div class="flex items-center gap-4">
+                    <!-- Logo Original no Footer -->
+                    <img src="logo.jpg" alt="OMNYGEN Logo" class="h-10 w-auto rounded-full">
+                    <span class="text-xl font-black tracking-tight text-white">OMNY<span class="text-gradient">GEN</span></span>
+                </div>
+                
+                <p class="text-gray-500 text-sm font-semibold">
+                    &copy; 2026 OMNYGEN. Excelência em Código.
+                </p>
+                
+            </div>
+        </footer>
+        
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/5511976468487?text=Olá!%20Gostaria%20de%20falar%20com%20a%20OMNYGEN." target="_blank" 
+           class="fixed bottom-8 right-8 z-50 tubular-bg p-4 rounded-full floating text-white shadow-2xl flex items-center justify-center"
+           aria-label="Falar no WhatsApp">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+        </a>
+        
+    </body>
+</html>
